@@ -1,0 +1,18 @@
+<template name="Match">
+    <div class="row">
+        <div class="col">
+            <div class="match-img"
+                 style="background: {{#if profile.image}} url('{{profile.image}}') {{else}} url('/img/dummy.png') {{/if}}; background-size: cover; background-repeat: no-repeat; background-position: center;">
+            </div>
+        </div>
+        <div class="col-6">
+            <strong>{{profile.name}}</strong> ({{profile.age}})
+        </div>
+        <div class="col">
+            <a class="btn btn-success" href="mailto:{{emails.[0].address}}">
+                <span class="glyphicon glyphicon-envelope"></span>
+                Email user
+            </a>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,35 @@
+<head>
+  <title>🐶 dogdate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+</head>
+
+<template name="App_body">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">🐶 dogdate</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons }}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{#if currentUser}}
+                    <li><a href="/matches">Matches ({{matchCount}})</a></li>
+                        <li><a href="/settings">Settings</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        {{> Template.dynamic template=main}}
+    </div>
+</template>

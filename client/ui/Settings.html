@@ -1,0 +1,24 @@
+<template name="Settings">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <form class="settings">
+                <div class="form-group">
+                    <label for="profile-name">Name</label>
+                    <input  id="profile-name" type="text" class="form-control" placeholder="Name" name="name" value="{{currentUser.profile.name}}">
+                    <label for="profile-age">Age</label>
+                    <input  id="profile-age" type="number" class="form-control" placeholder="Age" name="age" value="{{currentUser.profile.age}}">
+                    <label for="profile-animal">Animal</label>
+                    <input  id="profile-animal" type="text" class="form-control" placeholder="Animal" name="animal" value="{{currentUser.profile.animal}}">
+                    <label for="profile-image">Image</label>
+                    <input  id="profile-image" type="text" class="form-control" placeholder="Image" name="image" value="{{currentUser.profile.image}}">
+                    <label for="profile-sex">Sex</label>
+                    <select id="profile-sex" class="form-control" name="sex">
+                        <option value="m" {{selected "m" currentUser.profile.sex}}>m</option>
+                        <option value="w" {{selected "w" currentUser.profile.sex}}>w</option>
+                    </select>
+                    <button class="form-control btn btn-success" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>

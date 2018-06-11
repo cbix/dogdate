@@ -1,0 +1,53 @@
+.card-img {
+    position: relative;
+    width: 100%;
+}
+
+.card-img:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.card-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.card-buttons {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+}
+
+.card-btn {
+    position: absolute;
+}
+
+.card-btn-left {
+    left: 0;
+}
+
+.card-btn-right {
+    right: 0;
+}
+
+.btn-circle {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  padding: 0 0;
+  font-size: 2em;
+  line-height: 1.42;
+  border-radius: 1em;
+}

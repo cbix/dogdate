@@ -1,0 +1,14 @@
+<template name="Card">
+    <div class="card-img row"
+         style="background: {{#if user.profile.image}} url('{{user.profile.image}}') {{else}} url('/img/dummy.png') {{/if}}; background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="card-content col-12">
+            <div class="card-buttons">
+                <button class="card-btn card-btn-left card-btn-hate btn btn-danger btn-circle glyphicon glyphicon-remove"></button>
+                <button class="card-btn card-btn-right card-btn-love btn btn-success btn-circle glyphicon glyphicon-heart"></button>
+            </div>
+            <div class="card-caption">
+                <strong>{{user.profile.name}}</strong> ({{user.profile.age}})
+            </div>
+        </div>
+    </div>
+</template>
